@@ -1,0 +1,34 @@
+{
+  "title": "Reproducible Data & Verification Suite for: Quantum Boltzmann Equation for Static Correlation with Cumulant Kernel Closure (Q-BESC & Q-BECK)",
+  "upload_type": "dataset",
+  "publication_date": "2026-11-11",
+  "creators": [
+    {
+      "name": "Chakraborty, Romit",
+      "affiliation": "Point Reyes Sound, Inc."
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Point Reyes Sound, Inc.",
+      "type": "RightsHolder",
+      "affiliation": "Point Reyes Sound, Inc."
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "quantum chemistry",
+    "electronic structure theory",
+    "static correlation",
+    "Quantum Boltzmann Equation",
+    "reduced density matrix",
+    "cumulant decomposition",
+    "generalized Pauli constraints",
+    "Q-BESC",
+    "Q-BECK",
+    "Point Reyes Sound"
+  ],
+  "description": "<p>Archival converged atomic-orbital 1-RDM datasets (<code>.npz</code>), numerical benchmark trajectories (<code>.json</code> and <code>.npz</code>), OpenAPI 3.1 gateway specification (<code>openapi.json</code>), and standalone PySCF / FastAPI verification suite (<code>verify_reproducibility.py</code>) accompanying the manuscript <em>Quantum Boltzmann Equation for Static Correlation with Cumulant Kernel Closure</em> by Romit Chakraborty (Point Reyes Sound, Inc.).</p><p>Covers all eight benchmark suites reported in the manuscript: collinear H<sub>3</sub> exchange and Borland&ndash;Dennis generalized Pauli polytope distances, square H<sub>4</sub> (D<sub>4h</sub>) Mott dissociation, BeH<sub>2</sub> (C<sub>2v</sub>) Purvis&ndash;Bartlett avoided crossing, symmetric H<sub>2</sub>O double dissociation, N<sub>2</sub> Dunning basis hierarchy and triple-bond cleavage, singlet <em>ortho</em>-, <em>meta</em>-, and <em>para</em>-benzyne diradicals, the 11-molecule MR-MGN-BE17 homolytic dissociation benchmark, and O(N<sub>AO</sub><sup>3</sup>) computational scaling across N<sub>AO</sub> in [15, 300].</p><p><strong>Corporate &amp; Intellectual Property Attribution:</strong> Copyright &copy; 2026 Point Reyes Sound, Inc. The underlying Q-BESC and Q-BECK solver kernels constitute proprietary trade secrets and patent-pending intellectual property of Point Reyes Sound, Inc. protected under Indian Convention Patent Application No. IN 202634135090 and U.S. Provisional Patent Application No. US 64/033,274.</p>",
+  "notes": "Copyright (c) 2026 Point Reyes Sound, Inc. All rights reserved with respect to proprietary Q-BESC and Q-BECK solver kernels and patent rights under Indian Convention Patent Application No. IN 202634135090 and U.S. Provisional Patent Application No. US 64/033,274."
+}

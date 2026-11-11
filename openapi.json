@@ -1,0 +1,410 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Point Reyes Sound Q-BESC / Q-BECK Quantum Boltzmann Gateway",
+    "description": "Proprietary API gateway for zero-temperature static correlation via the Quantum Boltzmann Equation for Static Correlation (Q-BESC) and the O(N^3) Quantum Boltzmann Equation Cumulant-Kernel (Q-BECK).",
+    "version": "1.1.0"
+  },
+  "paths": {
+    "/v1/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/q-beck": {
+      "post": {
+        "summary": "Run Qbeck Endpoint",
+        "operationId": "run_qbeck_endpoint_v1_q_beck_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuantumBoltzmannRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuantumBoltzmannResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/q-besc": {
+      "post": {
+        "summary": "Run Qbesc Endpoint",
+        "operationId": "run_qbesc_endpoint_v1_q_besc_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuantumBoltzmannRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuantumBoltzmannResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "QuantumBoltzmannRequest": {
+        "properties": {
+          "atom": {
+            "type": "string",
+            "title": "Atom",
+            "description": "Molecular geometry in PySCF XYZ format, e.g. 'N 0 0 0; N 0 0 1.098'",
+            "examples": [
+              "H 0.0 0.0 -0.93; H 0.0 0.0 0.0; H 0.0 0.0 0.93"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "title": "Basis",
+            "description": "Atomic orbital basis set (e.g., 'cc-pvdz', '6-31g', 'aug-cc-pvtz').",
+            "default": "cc-pvdz"
+          },
+          "spin": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Spin",
+            "description": "2S = N_alpha - N_beta (0 for singlet, 1 for doublet, 2 for triplet).",
+            "default": 0
+          },
+          "charge": {
+            "type": "integer",
+            "title": "Charge",
+            "description": "Net molecular charge.",
+            "default": 0
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit",
+            "description": "Coordinate unit ('Angstrom' or 'Bohr').",
+            "default": "Angstrom"
+          },
+          "symmetry": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Symmetry",
+            "description": "Point-group symmetry specification (False, True, or label such as 'C2v' or 'D2h').",
+            "default": false
+          },
+          "singlet_s0_only": {
+            "type": "boolean",
+            "title": "Singlet S0 Only",
+            "description": "If True, enforces spin-pure singlet sector (S=0, <S^2>=0) across multi-root / diabatic crossings (e.g., BeH2 C2v).",
+            "default": false
+          },
+          "active_space": {
+            "anyOf": [
+              {
+                "prefixItems": [
+                  {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "prefixItems": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "integer"
+                          }
+                        ],
+                        "type": "array",
+                        "maxItems": 2,
+                        "minItems": 2
+                      },
+                      {
+                        "items": {
+                          "type": "integer"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ],
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Active Space",
+            "description": "Optional active-space tuple (n_elec_cas, n_orb_cas), e.g., (6, 6) for N2, ((4, 2), 8) for B2, or None for full-space / susceptibility-windowed mode."
+          },
+          "omega": {
+            "type": "number",
+            "maximum": 1.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Omega",
+            "description": "Markovian relaxation weight w = dt/tau (default 0.5).",
+            "default": 0.5
+          },
+          "tol": {
+            "type": "number",
+            "maximum": 1e-05,
+            "exclusiveMinimum": 0.0,
+            "title": "Tol",
+            "description": "Stationarity threshold (default 1e-9 Ha, < 1e-7).",
+            "default": 1e-09
+          },
+          "max_cycle": {
+            "type": "integer",
+            "maximum": 2000.0,
+            "minimum": 10.0,
+            "title": "Max Cycle",
+            "description": "Maximum Markovian relaxation steps.",
+            "default": 300
+          },
+          "use_broken_symmetry_seed": {
+            "type": "boolean",
+            "title": "Use Broken Symmetry Seed",
+            "description": "If True, seeds relaxation from a broken-symmetry UHF reference density.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "atom"
+        ],
+        "title": "QuantumBoltzmannRequest"
+      },
+      "QuantumBoltzmannResponse": {
+        "properties": {
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "n_ao": {
+            "type": "integer",
+            "title": "N Ao"
+          },
+          "n_elec": {
+            "type": "integer",
+            "title": "N Elec"
+          },
+          "e_tot": {
+            "type": "number",
+            "title": "E Tot"
+          },
+          "e_ref": {
+            "type": "number",
+            "title": "E Ref"
+          },
+          "e_corr_cumulant": {
+            "type": "number",
+            "title": "E Corr Cumulant"
+          },
+          "natural_occupations": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Natural Occupations"
+          },
+          "omega_orbital": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Omega Orbital"
+          },
+          "omega_act": {
+            "type": "number",
+            "title": "Omega Act"
+          },
+          "virial_ratio": {
+            "type": "number",
+            "title": "Virial Ratio"
+          },
+          "virial_defect": {
+            "type": "number",
+            "title": "Virial Defect"
+          },
+          "s_config": {
+            "type": "number",
+            "title": "S Config"
+          },
+          "s_vn": {
+            "type": "number",
+            "title": "S Vn"
+          },
+          "d_bd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "D Bd"
+          },
+          "commutator_norm": {
+            "type": "number",
+            "title": "Commutator Norm"
+          },
+          "cycles": {
+            "type": "integer",
+            "title": "Cycles"
+          },
+          "converged": {
+            "type": "boolean",
+            "title": "Converged"
+          },
+          "step_time_ms": {
+            "type": "number",
+            "title": "Step Time Ms"
+          },
+          "total_time_ms": {
+            "type": "number",
+            "title": "Total Time Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "method",
+          "n_ao",
+          "n_elec",
+          "e_tot",
+          "e_ref",
+          "e_corr_cumulant",
+          "natural_occupations",
+          "omega_orbital",
+          "omega_act",
+          "virial_ratio",
+          "virial_defect",
+          "s_config",
+          "s_vn",
+          "commutator_norm",
+          "cycles",
+          "converged",
+          "step_time_ms",
+          "total_time_ms"
+        ],
+        "title": "QuantumBoltzmannResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+Copyright (c) 2026 Point Reyes Sound, Inc.
+
+===============================================================================
+1. Verification Scripts & Client Software License (MIT License)
+===============================================================================
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the verification scripts, OpenAPI schema files, and documentation in this
+repository (the "Verification Software"), to deal in the Verification Software
+without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Verification Software, and to permit persons to whom the Verification Software
+is furnished to do so, subject to the following conditions:
+
+The above copyright notice, this permission notice, and the Patent & Trade-
+Secret Reservation Notice below shall be included in all copies or substantial
+portions of the Verification Software.
+
+THE VERIFICATION SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS (POINT REYES SOUND, INC.) BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+VERIFICATION SOFTWARE OR THE USE OR OTHER DEALINGS IN THE VERIFICATION
+SOFTWARE.
+
+===============================================================================
+2. Archival Numerical Datasets License (CC BY 4.0)
+===============================================================================
+
+The pre-computed atomic-orbital 1-RDM archives and numerical benchmark datasets
+located in `data/` are licensed by Point Reyes Sound, Inc. under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0). To view a copy of
+this license, visit https://creativecommons.org/licenses/by/4.0/.
+
+===============================================================================
+3. Patent & Trade-Secret Reservation Notice (Point Reyes Sound, Inc.)
+===============================================================================
+
+Nothing in this license grants, by implication, estoppel, or otherwise, any
+license or right under any patent, patent application, or trade secret of
+Point Reyes Sound, Inc., including without limitation the Quantum Boltzmann
+Equation for Static Correlation (Q-BESC) and Quantum Boltzmann Equation
+Cumulant-Kernel (Q-BECK) solver kernels protected under Indian Convention
+Patent Application No. IN 202634135090 and U.S. Provisional Patent Application
+No. US 64/033,274.

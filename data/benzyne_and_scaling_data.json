@@ -1,0 +1,599 @@
+{
+  "hardware": "Apple M2 (8-core CPU, 16 GB Unified Memory, macOS)",
+  "benzyne_results": {
+    "ortho": {
+      "E_RHF": -229.4052606136481,
+      "E_QBESCF": -229.40526061364787,
+      "E_PBE": -230.62860708069226,
+      "E_SCAN": -230.8209332227892,
+      "E_CASSCF_4_4": -229.46871453116236,
+      "E_CCSD_T": -230.2719498558212,
+      "E_QBECK": -230.27209109698336,
+      "gap_HL_Ha": 0.4246231192499703,
+      "omega_act_Ha": 0.26763143129426203,
+      "n_HONO_QBECK": 0.8722234744618018,
+      "n_LUNO_QBECK": 0.16175559524561264,
+      "n_HONO_CAS": 0.9059824332219198,
+      "n_LUNO_CAS": 0.09402115715091791,
+      "time_qbeck_s": 6.693704833975062,
+      "total_time_s": 98.05856091692112
+    },
+    "meta": {
+      "E_RHF": -229.34332858830294,
+      "E_QBESCF": -229.3433285883653,
+      "E_PBE": -230.59945907951777,
+      "E_SCAN": -230.7900457785708,
+      "E_CASSCF_4_4": -229.4338630477254,
+      "E_CCSD_T": -230.24136695243675,
+      "E_QBECK": -230.24844205164877,
+      "gap_HL_Ha": 0.332103371333691,
+      "omega_act_Ha": 0.27675401880672984,
+      "n_HONO_QBECK": 0.7422830582960718,
+      "n_LUNO_QBECK": 0.2828796138161583,
+      "n_HONO_CAS": 0.8259717881542388,
+      "n_LUNO_CAS": 0.17396533388786556,
+      "time_qbeck_s": 8.786216041073203,
+      "total_time_s": 64.87305975006893
+    },
+    "para": {
+      "E_RHF": -229.2706586875629,
+      "E_QBESCF": -229.27065868756296,
+      "E_PBE": -230.57197010253117,
+      "E_SCAN": -230.75832085974508,
+      "E_CASSCF_4_4": -229.4212422784113,
+      "E_CCSD_T": -230.2342711045978,
+      "E_QBECK": -230.225589807033,
+      "gap_HL_Ha": 0.2189632408263742,
+      "omega_act_Ha": 0.26945152190677396,
+      "n_HONO_QBECK": 0.6636678936280432,
+      "n_LUNO_QBECK": 0.485022589399722,
+      "n_HONO_CAS": 0.5908469128293727,
+      "n_LUNO_CAS": 0.4091567780607771,
+      "time_qbeck_s": 8.078751583117992,
+      "total_time_s": 57.8390775420703
+    }
+  },
+  "benzyne_comparison": {
+    "Expt": {
+      "meta_ortho": 15.6,
+      "para_ortho": 31.2,
+      "meta_err": 6.1,
+      "para_err": 4.2
+    },
+    "CCSD(T)": {
+      "meta_ortho": 14.03,
+      "para_ortho": 27.42
+    },
+    "QBEC(4,4)": {
+      "meta_ortho": 16.5,
+      "para_ortho": 29.5
+    },
+    "QBECK": {
+      "meta_ortho": 14.84,
+      "para_ortho": 29.18
+    },
+    "tPBE (MC-PDFT)": {
+      "meta_ortho": 9.5,
+      "para_ortho": 28.8
+    },
+    "PBE-RDMFT": {
+      "meta_ortho": 8.4,
+      "para_ortho": 27.4
+    },
+    "SCAN-RDMFT": {
+      "meta_ortho": 9.34,
+      "para_ortho": 30.62
+    },
+    "PBE-DFT": {
+      "meta_ortho": 8.4,
+      "para_ortho": 33.73
+    },
+    "SCAN-DFT": {
+      "meta_ortho": 9.34,
+      "para_ortho": 35.89
+    },
+    "QBE-SCF (RHF)": {
+      "meta_ortho": 38.86,
+      "para_ortho": 84.46
+    },
+    "Q-BECK": {
+      "meta_ortho": 14.84,
+      "para_ortho": 29.18
+    },
+    "Q-BESC(4,4)": {
+      "meta_ortho": 16.5,
+      "para_ortho": 29.5
+    },
+    "QBESC(4,4)": {
+      "meta_ortho": 16.5,
+      "para_ortho": 29.5
+    }
+  },
+  "n2_table1_comparison": {
+    "PBE-DFT": {
+      "error_kcal": 219.93,
+      "source": "Gibney et al., PRL 131, 243003 (2023)"
+    },
+    "SCAN-DFT": {
+      "error_kcal": 213.67,
+      "source": "Gibney et al., PRL 131, 243003 (2023)"
+    },
+    "QBE-SCF (RHF)": {
+      "error_kcal": 485.16,
+      "source": "This work"
+    },
+    "SCAN-RDMFT": {
+      "error_kcal": 71.57,
+      "source": "Gibney et al., PRL 131, 243003 (2023)"
+    },
+    "PBE-RDMFT": {
+      "error_kcal": 43.61,
+      "source": "Gibney et al., PRL 131, 243003 (2023)"
+    },
+    "tPBE (MC-PDFT)": {
+      "error_kcal": 20.08,
+      "source": "Gibney et al., PRL 131, 243003 (2023)"
+    },
+    "QBECK (Autonomous)": {
+      "error_kcal": 69.18,
+      "source": "This work"
+    },
+    "QBEC(6,6)": {
+      "error_kcal": 0.0,
+      "source": "This work"
+    }
+  },
+  "scaling_records": [
+    {
+      "system": "N2 (cc-pVDZ)",
+      "nelec": 14,
+      "nao": 28,
+      "t_step_ms": 7.157,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (aug-cc-pVDZ)",
+      "nelec": 14,
+      "nao": 46,
+      "t_step_ms": 20.659,
+      "mem_qbeck_mb": 12.79,
+      "mem_2rdm_mb": 34.16,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (cc-pVTZ)",
+      "nelec": 14,
+      "nao": 60,
+      "t_step_ms": 42.625,
+      "mem_qbeck_mb": 13.06,
+      "mem_2rdm_mb": 98.88,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (aug-cc-pVTZ)",
+      "nelec": 14,
+      "nao": 92,
+      "t_step_ms": 245.713,
+      "mem_qbeck_mb": 13.95,
+      "mem_2rdm_mb": 546.56,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (cc-pVQZ)",
+      "nelec": 14,
+      "nao": 110,
+      "t_step_ms": 477.895,
+      "mem_qbeck_mb": 14.62,
+      "mem_2rdm_mb": 1117.02,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (aug-cc-pVQZ)",
+      "nelec": 14,
+      "nao": 160,
+      "t_step_ms": 1654.716,
+      "mem_qbeck_mb": 17.09,
+      "mem_2rdm_mb": 5000.0,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (cc-pV5Z)",
+      "nelec": 14,
+      "nao": 182,
+      "t_step_ms": 3914.115,
+      "mem_qbeck_mb": 18.47,
+      "mem_2rdm_mb": 8370.97,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "N2 (aug-cc-pV5Z)",
+      "nelec": 14,
+      "nao": 254,
+      "t_step_ms": 15811.531,
+      "mem_qbeck_mb": 24.21,
+      "mem_2rdm_mb": 31755.94,
+      "category": "N2 Basis Series",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_10 (cc-pVDZ)",
+      "nelec": 10,
+      "nao": 50,
+      "t_step_ms": 21.92,
+      "mem_qbeck_mb": 12.86,
+      "mem_2rdm_mb": 47.68,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_20 (cc-pVDZ)",
+      "nelec": 20,
+      "nao": 100,
+      "t_step_ms": 152.202,
+      "mem_qbeck_mb": 14.23,
+      "mem_2rdm_mb": 762.94,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_30 (cc-pVDZ)",
+      "nelec": 30,
+      "nao": 150,
+      "t_step_ms": 302.623,
+      "mem_qbeck_mb": 16.52,
+      "mem_2rdm_mb": 3862.38,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_40 (cc-pVDZ)",
+      "nelec": 40,
+      "nao": 200,
+      "t_step_ms": 458.465,
+      "mem_qbeck_mb": 19.72,
+      "mem_2rdm_mb": 12207.03,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_50 (cc-pVDZ)",
+      "nelec": 50,
+      "nao": 250,
+      "t_step_ms": 723.983,
+      "mem_qbeck_mb": 23.84,
+      "mem_2rdm_mb": 29802.32,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H_60 (cc-pVDZ)",
+      "nelec": 60,
+      "nao": 300,
+      "t_step_ms": 938.461,
+      "mem_qbeck_mb": 28.88,
+      "mem_2rdm_mb": 61798.1,
+      "category": "H_n Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "CH4 (cc-pVDZ)",
+      "nelec": 10,
+      "nao": 34,
+      "t_step_ms": 12.336,
+      "mem_qbeck_mb": 12.61,
+      "mem_2rdm_mb": 10.2,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C2H6 (cc-pVDZ)",
+      "nelec": 18,
+      "nao": 58,
+      "t_step_ms": 84.757,
+      "mem_qbeck_mb": 13.02,
+      "mem_2rdm_mb": 86.34,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C4H10 (cc-pVDZ)",
+      "nelec": 34,
+      "nao": 106,
+      "t_step_ms": 847.244,
+      "mem_qbeck_mb": 14.46,
+      "mem_2rdm_mb": 963.19,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C6H14 (cc-pVDZ)",
+      "nelec": 50,
+      "nao": 154,
+      "t_step_ms": 2637.82,
+      "mem_qbeck_mb": 16.74,
+      "mem_2rdm_mb": 4291.14,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C8H18 (cc-pVDZ)",
+      "nelec": 66,
+      "nao": 202,
+      "t_step_ms": 5569.945,
+      "mem_qbeck_mb": 19.87,
+      "mem_2rdm_mb": 12702.69,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C10H22 (cc-pVDZ)",
+      "nelec": 82,
+      "nao": 250,
+      "t_step_ms": 9540.194,
+      "mem_qbeck_mb": 23.84,
+      "mem_2rdm_mb": 29802.32,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C12H26 (cc-pVDZ)",
+      "nelec": 98,
+      "nao": 298,
+      "t_step_ms": 14333.572,
+      "mem_qbeck_mb": 28.66,
+      "mem_2rdm_mb": 60166.55,
+      "category": "Alkane Chain",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H3 (cc-pVDZ)",
+      "nelec": 3,
+      "nao": 15,
+      "t_step_ms": 1.377,
+      "mem_qbeck_mb": 12.44,
+      "mem_2rdm_mb": 0.39,
+      "category": "Benchmark",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H4 (cc-pVDZ)",
+      "nelec": 4,
+      "nao": 20,
+      "t_step_ms": 1.533,
+      "mem_qbeck_mb": 12.47,
+      "mem_2rdm_mb": 1.22,
+      "category": "Benchmark",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "BeH2 (cc-pVDZ)",
+      "nelec": 6,
+      "nao": 24,
+      "t_step_ms": 3.515,
+      "mem_qbeck_mb": 12.51,
+      "mem_2rdm_mb": 2.53,
+      "category": "Benchmark",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "H2O (cc-pVDZ)",
+      "nelec": 10,
+      "nao": 24,
+      "t_step_ms": 3.544,
+      "mem_qbeck_mb": 12.51,
+      "mem_2rdm_mb": 2.53,
+      "category": "Benchmark",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "B2 (cc-pVDZ)",
+      "nelec": 10,
+      "nao": 28,
+      "t_step_ms": 7.446,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "C2 (cc-pVDZ)",
+      "nelec": 12,
+      "nao": 28,
+      "t_step_ms": 6.815,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "CN (cc-pVDZ)",
+      "nelec": 13,
+      "nao": 28,
+      "t_step_ms": 6.888,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "CO (cc-pVDZ)",
+      "nelec": 14,
+      "nao": 28,
+      "t_step_ms": 6.707,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "NO (cc-pVDZ)",
+      "nelec": 15,
+      "nao": 28,
+      "t_step_ms": 6.64,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "F2 (cc-pVDZ)",
+      "nelec": 18,
+      "nao": 28,
+      "t_step_ms": 6.219,
+      "mem_qbeck_mb": 12.54,
+      "mem_2rdm_mb": 4.69,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "SiO (cc-pVDZ)",
+      "nelec": 22,
+      "nao": 32,
+      "t_step_ms": 17.928,
+      "mem_qbeck_mb": 12.59,
+      "mem_2rdm_mb": 8.0,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "S2 (cc-pVDZ)",
+      "nelec": 32,
+      "nao": 36,
+      "t_step_ms": 33.912,
+      "mem_qbeck_mb": 12.64,
+      "mem_2rdm_mb": 12.81,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "CO2 (cc-pVDZ)",
+      "nelec": 22,
+      "nao": 42,
+      "t_step_ms": 27.203,
+      "mem_qbeck_mb": 12.72,
+      "mem_2rdm_mb": 23.74,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "NF3 (cc-pVDZ)",
+      "nelec": 34,
+      "nao": 56,
+      "t_step_ms": 71.134,
+      "mem_qbeck_mb": 12.97,
+      "mem_2rdm_mb": 75.03,
+      "category": "MR-MGN-BE17",
+      "direct_scf_median10_v2": true
+    },
+    {
+      "system": "o-C6H4 (cc-pVDZ)",
+      "nelec": 40,
+      "nao": 104,
+      "t_step_ms": 843.052,
+      "mem_qbeck_mb": 14.38,
+      "mem_2rdm_mb": 892.53,
+      "category": "Benchmark",
+      "direct_scf_median10_v2": true
+    }
+  ],
+  "empirical_time_exponent": 2.981,
+  "paper1_table_rows": [
+    {
+      "system": "H3 ([H-H-H]^\\ddagger, s=0 A)",
+      "nao": 15,
+      "e_ref": -1.646515,
+      "e_qbeck": -1.607527,
+      "comm": 8.173992988067837e-10,
+      "virial": 1.009775,
+      "s_config": 1.279,
+      "cycles": 65,
+      "t_step_ms": 0.793
+    },
+    {
+      "system": "H4 (D4h, R=1.20 A)",
+      "nao": 20,
+      "e_ref": -2.101908,
+      "e_qbeck": -1.994172,
+      "comm": 1.232920992367157e-10,
+      "virial": 1.04373,
+      "s_config": 2.336,
+      "cycles": 84,
+      "t_step_ms": 0.749
+    },
+    {
+      "system": "BeH2 (C2v apex, x=1.54 A)",
+      "nao": 13,
+      "e_ref": -15.630102,
+      "e_qbeck": -15.599799,
+      "comm": 1.5742940448816647e-10,
+      "virial": 1.006618,
+      "s_config": 3.178,
+      "cycles": 66,
+      "t_step_ms": 0.64
+    },
+    {
+      "system": "H2O (C2v eq, R=0.96 A)",
+      "nao": 24,
+      "e_ref": -76.079964,
+      "e_qbeck": -76.050577,
+      "comm": 9.225656344195651e-10,
+      "virial": 1.00061,
+      "s_config": 2.121,
+      "cycles": 57,
+      "t_step_ms": 1.001
+    },
+    {
+      "system": "N2 (eq, R=2.10 Bohr)",
+      "nao": 28,
+      "e_ref": -109.090564,
+      "e_qbeck": -108.983563,
+      "comm": 8.041842218490968e-10,
+      "virial": 1.001076,
+      "s_config": 2.339,
+      "cycles": 46,
+      "t_step_ms": 1.118
+    },
+    {
+      "system": "o-C6H4 (1A1, cc-pVDZ)",
+      "nao": 104,
+      "e_ref": -230.27195,
+      "e_qbeck": -230.272091,
+      "comm": 5.787836470330396e-10,
+      "virial": 1.001867,
+      "s_config": 2.176,
+      "cycles": 65,
+      "t_step_ms": 868.372
+    },
+    {
+      "system": "m-C6H4 (1A1, cc-pVDZ)",
+      "nao": 104,
+      "e_ref": -230.241367,
+      "e_qbeck": -230.248442,
+      "comm": 5.942200005758534e-10,
+      "virial": 1.002211,
+      "s_config": 2.682,
+      "cycles": 79,
+      "t_step_ms": 871.12
+    },
+    {
+      "system": "p-C6H4 (1A1, cc-pVDZ)",
+      "nao": 104,
+      "e_ref": -230.234271,
+      "e_qbeck": -230.22559,
+      "comm": 4.1413704232371844e-10,
+      "virial": 1.002522,
+      "s_config": 3.002,
+      "cycles": 87,
+      "t_step_ms": 874.65
+    }
+  ]
+}

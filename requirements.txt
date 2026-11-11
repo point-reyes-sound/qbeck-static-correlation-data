@@ -1,0 +1,5 @@
+numpy>=1.24
+scipy>=1.10
+pyscf>=2.4
+httpx>=0.25
+
