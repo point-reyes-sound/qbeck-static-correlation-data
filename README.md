@@ -1,9 +1,12 @@
 # Reproducible Data & Verification Suite: Q-BESC & Q-BECK
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24149207.svg)](https://doi.org/10.5281/zenodo.24149207)
+
 **Title:** *Quantum Boltzmann Equation for Static Correlation with Cumulant Kernel Closure*  
 **Author:** Romit Chakraborty (Point Reyes Sound, Inc.)  
 **Corporate Copyright:** Copyright © 2026 Point Reyes Sound, Inc.  
-**Zenodo DOI:** [`10.5281/zenodo.[PAPER2_ZENODO_DOI]`](https://doi.org/10.5281/zenodo.[PAPER2_ZENODO_DOI])  
+**Zenodo DOI:** [`10.5281/zenodo.24149207`](https://doi.org/10.5281/zenodo.24149207)  
+**GitHub Repository:** [`https://github.com/point-reyes-sound/qbeck-static-correlation-data`](https://github.com/point-reyes-sound/qbeck-static-correlation-data) (`v1.0.0`)  
 **IP & Trade-Secret Notice:** The Q-BESC and Q-BECK solver kernels constitute proprietary trade secrets and patent-pending intellectual property of Point Reyes Sound, Inc. protected under Indian Convention Patent Application No. IN 202634135090 and U.S. Provisional Patent Application No. US 64/033,274.  
 **Invariant Production Solver Parameters:** Markovian relaxation weight $w = \Delta t / \tau = 0.5$, susceptibility window width $\Delta_0 = 0.45\text{ }E_{\mathrm{h}}$, orthogonalized commutator stationarity threshold $\Vert [\mathbf{S}^{-1/2}\,{}^{1}\mathbf{F}_{\mathrm{eff}}\,\mathbf{S}^{-1/2}, \mathbf{S}^{1/2}\,{}^{1}\mathbf{P}\,\mathbf{S}^{1/2}] \Vert_F \le 10^{-9}\text{ }E_{\mathrm{h}}$ (strictly below $10^{-7}$), and `brentq` chemical-potential root-finding tolerance $10^{-12}\text{ }E_{\mathrm{h}}$.
 
@@ -68,3 +71,19 @@ python verify_reproducibility.py --mode api --url http://127.0.0.1:8000
 ```
 
 Pass `--extended` to include the largest Dunning basis expansions on $\mathrm{N}_2$ (`aug-cc-pVQZ` through `aug-cc-pV5Z`, $N_{\mathrm{AO}} \le 254$) and hydrogen chains up to $\mathrm{H}_{60}$ ($N_{\mathrm{AO}} = 300$), or `--mode both` to execute both offline and live API audits sequentially.
+
+---
+
+## 4. Citation
+
+```bibtex
+@dataset{chakraborty2026qbeck_data,
+  author       = {Chakraborty, Romit},
+  title        = {{Reproducible Data and Verification Suite for: Quantum Boltzmann Equation for Static Correlation with Cumulant Kernel Closure}},
+  year         = {2026},
+  publisher    = {Point Reyes Sound, Inc. / Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.24149207},
+  url          = {https://doi.org/10.5281/zenodo.24149207}
+}
+```
